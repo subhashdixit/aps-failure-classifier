@@ -1,0 +1,200 @@
+{
+  "version": "1.0.0",
+  "source_sha256": "0401475a54d972423e7daf999b58b078750769f9918ce0f327da1aac5688b781",
+  "source_path": "aps_failure_training_set1.csv",
+  "source_notice": "Scania CV AB (2016), APS Failure and Operational Data, as preserved in this repository. Official UCI 421 description includes GPL v3-or-later source terms and the challenge cost 10*FP + 500*FN. Original source retained; no physical meaning is invented for anonymized fields.",
+  "original_rows": 36188,
+  "valid_target_rows": 36188,
+  "out_of_range_values_imputed": {},
+  "selected_model": "linear",
+  "kind": "classification",
+  "threshold": 0.01,
+  "split": {
+    "train": 21712,
+    "validation": 7238,
+    "test": 7238
+  },
+  "split_method": "GroupShuffleSplit; identical selected profiles share a group",
+  "validation_candidates": {
+    "linear": {
+      "rows": 7238,
+      "accuracy": 0.9868748273003592,
+      "macro_f1": 0.865780314302953,
+      "average_precision": 0.8017295608330719,
+      "roc_auc": 0.9623998806592304,
+      "confusion_matrix": [
+        [
+          7009,
+          28
+        ],
+        [
+          67,
+          134
+        ]
+      ],
+      "classification_report": {
+        "0.0": {
+          "precision": 0.9905313736574336,
+          "recall": 0.9960210316896405,
+          "f1-score": 0.9932686175866222,
+          "support": 7037.0
+        },
+        "1.0": {
+          "precision": 0.8271604938271605,
+          "recall": 0.6666666666666666,
+          "f1-score": 0.7382920110192838,
+          "support": 201.0
+        },
+        "accuracy": 0.9868748273003592,
+        "macro avg": {
+          "precision": 0.908845933742297,
+          "recall": 0.8313438491781535,
+          "f1-score": 0.865780314302953,
+          "support": 7238.0
+        },
+        "weighted avg": {
+          "precision": 0.9859945476218043,
+          "recall": 0.9868748273003592,
+          "f1-score": 0.9861878911539013,
+          "support": 7238.0
+        }
+      }
+    },
+    "random_forest": {
+      "rows": 7238,
+      "accuracy": 0.9682232660956065,
+      "macro_f1": 0.796141238753566,
+      "average_precision": 0.7138459862822936,
+      "roc_auc": 0.9844107584855317,
+      "confusion_matrix": [
+        [
+          6829,
+          208
+        ],
+        [
+          22,
+          179
+        ]
+      ],
+      "classification_report": {
+        "0.0": {
+          "precision": 0.9967887899576704,
+          "recall": 0.9704419496944721,
+          "f1-score": 0.9834389400921659,
+          "support": 7037.0
+        },
+        "1.0": {
+          "precision": 0.4625322997416021,
+          "recall": 0.8905472636815921,
+          "f1-score": 0.608843537414966,
+          "support": 201.0
+        },
+        "accuracy": 0.9682232660956065,
+        "macro avg": {
+          "precision": 0.7296605448496363,
+          "recall": 0.9304946066880321,
+          "f1-score": 0.796141238753566,
+          "support": 7238.0
+        },
+        "weighted avg": {
+          "precision": 0.9819524326029551,
+          "recall": 0.9682232660956065,
+          "f1-score": 0.973036387461865,
+          "support": 7238.0
+        }
+      }
+    }
+  },
+  "test": {
+    "rows": 7238,
+    "accuracy": 0.9386570875932578,
+    "macro_f1": 0.7069568290769347,
+    "average_precision": 0.7545784367391573,
+    "roc_auc": 0.9512043810471594,
+    "confusion_matrix": [
+      [
+        6615,
+        424
+      ],
+      [
+        20,
+        179
+      ]
+    ],
+    "classification_report": {
+      "0.0": {
+        "precision": 0.9969856819894499,
+        "recall": 0.9397641710470237,
+        "f1-score": 0.96752961825362,
+        "support": 7039.0
+      },
+      "1.0": {
+        "precision": 0.296849087893864,
+        "recall": 0.8994974874371859,
+        "f1-score": 0.4463840399002494,
+        "support": 199.0
+      },
+      "accuracy": 0.9386570875932578,
+      "macro avg": {
+        "precision": 0.646917384941657,
+        "recall": 0.9196308292421048,
+        "f1-score": 0.7069568290769347,
+        "support": 7238.0
+      },
+      "weighted avg": {
+        "precision": 0.9777362785320002,
+        "recall": 0.9386570875932578,
+        "f1-score": 0.9532013549084527,
+        "support": 7238.0
+      }
+    },
+    "challenge_cost": 14240
+  },
+  "test_baseline": {
+    "rows": 7238,
+    "accuracy": 0.9725062171870682,
+    "macro_f1": 0.49303074875674163,
+    "average_precision": 0.027493782812931748,
+    "roc_auc": 0.5,
+    "confusion_matrix": [
+      [
+        7039,
+        0
+      ],
+      [
+        199,
+        0
+      ]
+    ],
+    "classification_report": {
+      "0.0": {
+        "precision": 0.9725062171870682,
+        "recall": 1.0,
+        "f1-score": 0.9860614975134833,
+        "support": 7039.0
+      },
+      "1.0": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 199.0
+      },
+      "accuracy": 0.9725062171870682,
+      "macro avg": {
+        "precision": 0.4862531085935341,
+        "recall": 0.5,
+        "f1-score": 0.49303074875674163,
+        "support": 7238.0
+      },
+      "weighted avg": {
+        "precision": 0.9457683424675012,
+        "recall": 0.9725062171870682,
+        "f1-score": 0.9589509368606532,
+        "support": 7238.0
+      }
+    }
+  },
+  "training_only_preprocessing": true,
+  "sklearn_version": "1.6.1",
+  "artifact_sha256": "9811147e29f53fd32fef60168e2e5b8319a8b2aa34117833822493f9e78546b3"
+}
