@@ -1,0 +1,13 @@
+{
+  "old": "APS_Failure_Detection_End_to_End_Project",
+  "name": "aps-failure-classifier",
+  "title": "APS Failure Explorer",
+  "kind": "classification",
+  "target": "class",
+  "unit": "APS failure source label",
+  "color": "#346d74",
+  "intro": "Explore class imbalance, missing sensor values and cost-sensitive APS failure detection.",
+  "limitations": "Sensor names are anonymized. Class 0 denotes failures unrelated to APS, not a healthy vehicle. Use valid source-format sensor exports; no diagnostic or safe-to-drive claim is made.",
+  "positiveLabel": "APS-related failure source label",
+  "negativeLabel": "Non-APS failure source label"
+}
