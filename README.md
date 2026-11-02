@@ -1,5 +1,8 @@
 # APS Failure Explorer
 
+**Reproducible versions:** [Dependency versions and exact setup](DEPENDENCIES.md).
+
+
 **Application:** [Open APS Failure Explorer](https://subhashdixit.github.io/aps-failure-classifier/) · [Source](https://github.com/subhashdixit/aps-failure-classifier)
 
 Explore class imbalance, missing sensor values and cost-sensitive APS failure detection. A complete **HTML/CSS/JavaScript application hosted on GitHub Pages**, with real offline Python training and a verified numeric model export. Inference runs in the visitor's browser, including CSV batches; there is no paid prediction API or model server.
@@ -115,7 +118,7 @@ Open `http://127.0.0.1:8000`. Serve over HTTP rather than opening `index.html` w
 ```bash
 python3 -m venv .venv
 source .venv/bin/activate
-python -m pip install -r requirements-training.txt
+python -m python -m pip install --require-hashes --only-binary=:all: -r requirements-training.lock.txt
 python scripts/train.py
 python scripts/check_release.py
 python -m black --check scripts
